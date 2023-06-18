@@ -1,0 +1,12 @@
+de.limita.kafka.worker.threadCount: 2
+topic: "topic"
+poll:
+  interval: 5000
+spring:
+  kafka:
+    consumer:
+      group-id: "test-group2"
+      auto-offset-reset: earliest
+      bootstrap-servers: ${spring.embedded.kafka.brokers}
+    producer:
+      bootstrap-servers: ${spring.embedded.kafka.brokers}
